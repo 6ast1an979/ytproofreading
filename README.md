@@ -2,9 +2,19 @@
 
 A python module to use the proofreading support api of Yahoo! japan
 
+## Requirement
+* beautifulsoup4
+* certifi
+* chardet
+* idna
+* lxml
+* requests
+* soupsieve
+* urllib3
+
 ## Installation
 
-```
+```bash
 $ pip install ytproofreading
 ```
 
@@ -37,3 +47,19 @@ print(kousei.proofreading_support(text, 0, 1))
 {'startpos': '2', 'length': '2', 'surface': '彼方', 'shitekiword': '彼方（かなた）', 'shitekiinfo': '用字'}]
 """
 ```
+
+## Note
+For more information about arguments and errors, please refer to the following URL.
+* arguments: https://developer.yahoo.co.jp/webapi/jlp/kousei/v1/kousei.html
+* errors: https://developer.yahoo.co.jp/appendix/errors.html
+
+
+
+
+## Author
+* 6ast1an979
+* email: 6ast1an979@gmail.com
+* twitter: @6ast1an979
+
+## License
+"ytproofreading" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
