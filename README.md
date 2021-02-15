@@ -59,7 +59,7 @@ For more information about arguments and errors, please refer to the following U
 ## Author
 * 6ast1an979
 * email: 6ast1an979@gmail.com
-* twitter: @6ast1an979
+* twitter: [@6ast1an979](https://twitter.com/6ast1an979)
 
 ## License
 "ytproofreading" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
