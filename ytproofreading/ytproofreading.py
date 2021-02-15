@@ -33,16 +33,16 @@ class Kousei(object):
 
         sentence = urllib.parse.quote(sentence)
 
-        if filter_group is None:
-            filter_group = ""
-        elif filter_group > 0 and filter_group < 4:
+        pointinggroup = list(range(1, 5))
+
+        if filter_group in pointinggroup:
             filter_group = "&filter_group=" + str(filter_group)
         else:
             filter_group = ""
 
-        if no_filter is None:
-            no_filter = ""
-        elif no_filter > 0 and no_filter < 18:
+        identificationnumber = list(range(1, 18))
+
+        if no_filter in identificationnumber:
             no_filter = "&no_filter=" + str(no_filter)
         else:
             no_filter = ""
