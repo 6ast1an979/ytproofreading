@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ytproofreading",
-    version="1.0.1",
+    version="1.2",
     author="6ast1an979",
     author_email="6ast1an979@gmail.com",
     description="A python module to use the proofreading support api of Yahoo! japan",
