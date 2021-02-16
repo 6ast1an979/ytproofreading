@@ -7,7 +7,7 @@ import requests
 import urllib.parse
 from bs4 import BeautifulSoup
 
-url = "https://jlp.yahooapis.jp/KouseiService/V1/kousei?"
+url = "https://jlp.yahooapis.jp/KouseiService/V1/kousei"
 
 
 class Kousei(object):
@@ -31,24 +31,24 @@ class Kousei(object):
 
         result = []
 
-        sentence = urllib.parse.quote(sentence)
+        payload = {"appid": self.appid, "sentence": sentence}
 
         pointinggroup = list(range(1, 5))
 
         if filter_group in pointinggroup:
-            filter_group = "&filter_group=" + str(filter_group)
+            payload["filter_group"] = str(filter_group)
         else:
             filter_group = ""
 
         identificationnumber = list(range(1, 18))
 
         if no_filter in identificationnumber:
-            no_filter = "&no_filter=" + str(no_filter)
+            payload["no_filter"] = str(no_filter)
         else:
             no_filter = ""
 
-        response = requests.get(
-            url + "appid=" + self.appid + "&sentence=" + sentence + filter_group + no_filter)
+        response = requests.get(url, params=payload)
+        print(response.url)
 
         soup = BeautifulSoup(response.text, "lxml")
 
