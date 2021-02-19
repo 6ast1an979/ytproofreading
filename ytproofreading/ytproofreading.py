@@ -48,7 +48,6 @@ class Kousei(object):
             no_filter = ""
 
         response = requests.get(url, params=payload)
-        print(response.url)
 
         soup = BeautifulSoup(response.text, "lxml")
 
